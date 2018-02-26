@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56057d2c-5557-440b-b66c-a8b602d6b677" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="source.harvesting.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source.harvesting.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="path.utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/path.utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="screeps-profiler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/screeps-profiler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roomLayout.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roomLayout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="687">
+              <caret line="529" column="1" lean-forward="false" selection-start-line="529" selection-start-column="1" selection-end-line="529" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!block;n#logObj#0" expanded="false" />
+                <element signature="n#!!block;n#values#0" expanded="false" />
+                <element signature="n#!!block;n#removeStale#0" expanded="false" />
+                <element signature="n#!!block;n#isStale#0" expanded="false" />
+                <element signature="n#!!block;n#isWhite#0" expanded="false" />
+                <element signature="n#!!block;n#consumeInput#0" expanded="false" />
+                <element signature="n#!!block;n#isWhiteYellow#0" expanded="false" />
+                <element signature="n#!!block;n#isWhiteRed#0" expanded="false" />
+                <element signature="n#!!block;n#getRoomLayout#0" expanded="false" />
+                <element signature="n#!!block;n#createMissingRoomLayout#0" expanded="false" />
+                <element signature="n#!!block;n#getNameFrom#0" expanded="false" />
+                <element signature="n#!!block;n#setExpansionRoom#0" expanded="false" />
+                <element signature="n#!!block;n#setExpansionLayout#0" expanded="false" />
+                <element signature="n#!!block;n#evaluateForExpansion#0" expanded="false" />
+                <element signature="n#!!block;n#evaluateRoomForExpansion#0" expanded="false" />
+                <element signature="n#!!block;n#isMyRoom#0" expanded="false" />
+                <element signature="n#!!block;n#isTwoSource#0" expanded="false" />
+                <element signature="n#!!block;n#establishLayouts#0" expanded="false" />
+                <element signature="n#!!block;n#establishLayout#0" expanded="false" />
+                <element signature="n#!!block;n#isChangedOrLacking#0" expanded="false" />
+                <element signature="n#!!block;n#createBoundingCircle#0" expanded="false" />
+                <element signature="n#!!block;n#createSourceToControllerPaths#0" expanded="false" />
+                <element signature="n#!!block;n#createSourceToControllerPath#0" expanded="false" />
+                <element signature="n#!!block;n#getLayoutCostMatrix#0" expanded="false" />
+                <element signature="n#!!block;n#printCostMatrix#0" expanded="false" />
+                <element signature="n#!!block;n#matrixIsCached#0" expanded="false" />
+                <element signature="n#!!block;n#discardMatrix#0" expanded="false" />
+                <element signature="n#!!block;n#generateCostMatrix#0" expanded="false" />
+                <element signature="n#!!block;n#getDistance#0" expanded="false" />
+                <element signature="n#!!block;n#adjustWorkSpots#0" expanded="false" />
+                <element signature="n#!!block;n#adjustUpgradeSpots#0" expanded="false" />
+                <element signature="n#!!block;n#adjustNearWallSpots#0" expanded="false" />
+                <element signature="n#!!block;n#adjustCostsNearTargetList#0" expanded="false" />
+                <element signature="n#!!block;n#getNearSpots#0" expanded="false" />
+                <element signature="n#!!block;n#getAdjacentPositions#0" expanded="false" />
+                <element signature="n#!!block;n#gridSort#0" expanded="false" />
+                <element signature="n#!!block;n#cacheCostMatrix#0" expanded="false" />
+                <element signature="n#!!block;n#createRCL1Structures#0" expanded="false" />
+                <element signature="n#!!block;n#isExpansionCandidate#0" expanded="false" />
+                <element signature="n#!!block;n#getCloserThingByControllerPath#0" expanded="false" />
+                <element signature="n#!!block;n#getPosNear#0" expanded="false" />
+                <element signature="n#!!block;n#removeWallPos#0" expanded="false" />
+                <element signature="n#!!block;n#isWall#0" expanded="false" />
+                <element signature="n#!!block;n#createSpawnRecord#0" expanded="false" />
+                <element signature="n#!!block;n#removeControllerPaths#0" expanded="false" />
+                <element signature="n#!!block;n#drawLayouts#0" expanded="false" />
+                <element signature="n#!!block;n#drawLayoutIn#0" expanded="false" />
+                <element signature="n#!!block;n#drawBoundingCircle#0" expanded="false" />
+                <element signature="n#!!block;n#drawSourceToControllerPaths#0" expanded="false" />
+                <element signature="n#!!block;n#drawSourceToControllerPath#0" expanded="false" />
+                <element signature="n#!!block;n#drawSpawns#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room.simple.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/room.simple.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1088">
+              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+              <folding>
+                <element signature="n#!!block;n#getSimpleRoom#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Gillman/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="31" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="18" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roomLayout.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Gillman/roomLayout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="714" column="59" lean-forward="false" selection-start-line="713" selection-start-column="5" selection-end-line="714" selection-end-column="59" />
+              <folding>
+                <element signature="n#!!block;n#isWall#0" expanded="false" />
+                <element signature="n#!!block;n#planDefenses#0" expanded="false" />
+                <element signature="n#!!block;n#drawDefenses#0" expanded="false" />
+                <element signature="n#!!block;n#planWallForExit#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>prelimCostMatrix</find>
+      <find>profiler</find>
+      <find>saveNewCostMatrix</find>
+      <find>room</find>
+      <find>sourceMemory</find>
+      <find>W</find>
+      <find>adjustCostMatrix</find>
+      <find>preliminaryPathing</find>
+      <find>drawSpawnLocation</find>
+      <find>stable</find>
+      <find>Near</find>
+      <find>getAdjacentPositions</find>
+      <find>roads</find>
+      <find>road</find>
+      <find>255</find>
+      <find>adjustUpgradeSpots</find>
+      <find>cacheCostMatrix</find>
+      <find>logObj</find>
+      <find>getLayoutCostMatrix</find>
+      <find>_.isE</find>
+      <find>sourceDetails</find>
+      <find>Memory.sources</find>
+      <find>minusObjectList</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/harvester.js" />
+        <option value="$PROJECT_DIR$/prototype.spawn.js" />
+        <option value="$PROJECT_DIR$/role.upgrader.js" />
+        <option value="$PROJECT_DIR$/role.builder.js" />
+        <option value="$PROJECT_DIR$/role.repairer.js" />
+        <option value="$PROJECT_DIR$/role.harvester.js" />
+        <option value="$PROJECT_DIR$/creep.gatherer.js" />
+        <option value="$PROJECT_DIR$/tower.attacker.js" />
+        <option value="$PROJECT_DIR$/spawn.solo.js" />
+        <option value="$PROJECT_DIR$/boundingCircle.js" />
+        <option value="$PROJECT_DIR$/room.simple.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/roomLayout.js" />
+        <option value="$PROJECT_DIR$/path.utils.js" />
+        <option value="$PROJECT_DIR$/source.harvesting.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="289" />
+    <option name="y" value="29" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JSUnfilteredForInLoop</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FranksMonster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FranksMonster" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="javascript.nodejs.core.library.configured.version" value="6.11.3" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56057d2c-5557-440b-b66c-a8b602d6b677" name="Default" comment="" />
+      <created>1518976488868</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518976488868</updated>
+      <workItem from="1518976490111" duration="21968000" />
+      <workItem from="1519050111827" duration="599000" />
+      <workItem from="1519106471777" duration="1155000" />
+      <workItem from="1519190325422" duration="4581000" />
+      <workItem from="1519224918055" duration="24476000" />
+      <workItem from="1519409665581" duration="261000" />
+      <workItem from="1519422962247" duration="594000" />
+      <workItem from="1519439013427" duration="103419000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="157053000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09905163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="23" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boundingCircle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gillman/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gillman/roomLayout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8755">
+          <caret line="515" column="38" lean-forward="false" selection-start-line="515" selection-start-column="38" selection-end-line="515" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!block;n#isWall#0" expanded="false" />
+            <element signature="n#!!block;n#planDefenses#0" expanded="false" />
+            <element signature="n#!!block;n#drawDefenses#0" expanded="false" />
+            <element signature="n#!!block;n#planWallForExit#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gillman/boundingCircle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="18" lean-forward="false" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boundingCircle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gillman/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gillman/boundingCircle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gillman/roomLayout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8466">
+          <caret line="498" column="26" lean-forward="false" selection-start-line="498" selection-start-column="9" selection-end-line="498" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!block;n#isWall#0" expanded="false" />
+            <element signature="n#!!block;n#planDefenses#0" expanded="false" />
+            <element signature="n#!!block;n#drawDefenses#0" expanded="false" />
+            <element signature="n#!!block;n#planWallForExit#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spawn.solo.js" />
+    <entry file="file://$PROJECT_DIR$/tower.attacker.js" />
+    <entry file="file://$PROJECT_DIR$/prototype.spawn.js" />
+    <entry file="file://$PROJECT_DIR$/role.upgrader.js" />
+    <entry file="file://$PROJECT_DIR$/role.harvester.js" />
+    <entry file="file://$PROJECT_DIR$/role.builder.js" />
+    <entry file="file://$PROJECT_DIR$/role.repairer.js" />
+    <entry file="file://$PROJECT_DIR$/creep.gatherer.js" />
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype.spawn.js" />
+    <entry file="file://$PROJECT_DIR$/role.upgrader.js" />
+    <entry file="file://$PROJECT_DIR$/role.harvester.js" />
+    <entry file="file://$PROJECT_DIR$/role.builder.js" />
+    <entry file="file://$PROJECT_DIR$/role.repairer.js" />
+    <entry file="file://$PROJECT_DIR$/creep.gatherer.js" />
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype.spawn.js" />
+    <entry file="file://$PROJECT_DIR$/role.upgrader.js" />
+    <entry file="file://$PROJECT_DIR$/role.harvester.js" />
+    <entry file="file://$PROJECT_DIR$/role.builder.js" />
+    <entry file="file://$PROJECT_DIR$/role.repairer.js" />
+    <entry file="file://$PROJECT_DIR$/creep.gatherer.js" />
+    <entry file="file://$PROJECT_DIR$/prototype.spawn.js" />
+    <entry file="file://$PROJECT_DIR$/role.repairer.js" />
+    <entry file="file://$PROJECT_DIR$/creep.gatherer.js" />
+    <entry file="file://$PROJECT_DIR$/tower.attacker.js" />
+    <entry file="file://$PROJECT_DIR$/spawn.solo.js" />
+    <entry file="file://$PROJECT_DIR$/role.upgrader.js" />
+    <entry file="file://$PROJECT_DIR$/role.harvester.js" />
+    <entry file="file://$PROJECT_DIR$/role.builder.js" />
+    <entry file="file://$PROJECT_DIR$/../Gillman/boundingCircle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boundingCircle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gillman/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="18" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gillman/roomLayout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="714" column="59" lean-forward="false" selection-start-line="713" selection-start-column="5" selection-end-line="714" selection-end-column="59" />
+          <folding>
+            <element signature="n#!!block;n#isWall#0" expanded="false" />
+            <element signature="n#!!block;n#planDefenses#0" expanded="false" />
+            <element signature="n#!!block;n#drawDefenses#0" expanded="false" />
+            <element signature="n#!!block;n#planWallForExit#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room.simple.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#getSimpleRoom#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path.utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screeps-profiler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roomLayout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="529" column="1" lean-forward="false" selection-start-line="529" selection-start-column="1" selection-end-line="529" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#logObj#0" expanded="false" />
+            <element signature="n#!!block;n#values#0" expanded="false" />
+            <element signature="n#!!block;n#removeStale#0" expanded="false" />
+            <element signature="n#!!block;n#isStale#0" expanded="false" />
+            <element signature="n#!!block;n#isWhite#0" expanded="false" />
+            <element signature="n#!!block;n#consumeInput#0" expanded="false" />
+            <element signature="n#!!block;n#isWhiteYellow#0" expanded="false" />
+            <element signature="n#!!block;n#isWhiteRed#0" expanded="false" />
+            <element signature="n#!!block;n#getRoomLayout#0" expanded="false" />
+            <element signature="n#!!block;n#createMissingRoomLayout#0" expanded="false" />
+            <element signature="n#!!block;n#getNameFrom#0" expanded="false" />
+            <element signature="n#!!block;n#setExpansionRoom#0" expanded="false" />
+            <element signature="n#!!block;n#setExpansionLayout#0" expanded="false" />
+            <element signature="n#!!block;n#evaluateForExpansion#0" expanded="false" />
+            <element signature="n#!!block;n#evaluateRoomForExpansion#0" expanded="false" />
+            <element signature="n#!!block;n#isMyRoom#0" expanded="false" />
+            <element signature="n#!!block;n#isTwoSource#0" expanded="false" />
+            <element signature="n#!!block;n#establishLayouts#0" expanded="false" />
+            <element signature="n#!!block;n#establishLayout#0" expanded="false" />
+            <element signature="n#!!block;n#isChangedOrLacking#0" expanded="false" />
+            <element signature="n#!!block;n#createBoundingCircle#0" expanded="false" />
+            <element signature="n#!!block;n#createSourceToControllerPaths#0" expanded="false" />
+            <element signature="n#!!block;n#createSourceToControllerPath#0" expanded="false" />
+            <element signature="n#!!block;n#getLayoutCostMatrix#0" expanded="false" />
+            <element signature="n#!!block;n#printCostMatrix#0" expanded="false" />
+            <element signature="n#!!block;n#matrixIsCached#0" expanded="false" />
+            <element signature="n#!!block;n#discardMatrix#0" expanded="false" />
+            <element signature="n#!!block;n#generateCostMatrix#0" expanded="false" />
+            <element signature="n#!!block;n#getDistance#0" expanded="false" />
+            <element signature="n#!!block;n#adjustWorkSpots#0" expanded="false" />
+            <element signature="n#!!block;n#adjustUpgradeSpots#0" expanded="false" />
+            <element signature="n#!!block;n#adjustNearWallSpots#0" expanded="false" />
+            <element signature="n#!!block;n#adjustCostsNearTargetList#0" expanded="false" />
+            <element signature="n#!!block;n#getNearSpots#0" expanded="false" />
+            <element signature="n#!!block;n#getAdjacentPositions#0" expanded="false" />
+            <element signature="n#!!block;n#gridSort#0" expanded="false" />
+            <element signature="n#!!block;n#cacheCostMatrix#0" expanded="false" />
+            <element signature="n#!!block;n#createRCL1Structures#0" expanded="false" />
+            <element signature="n#!!block;n#isExpansionCandidate#0" expanded="false" />
+            <element signature="n#!!block;n#getCloserThingByControllerPath#0" expanded="false" />
+            <element signature="n#!!block;n#getPosNear#0" expanded="false" />
+            <element signature="n#!!block;n#removeWallPos#0" expanded="false" />
+            <element signature="n#!!block;n#isWall#0" expanded="false" />
+            <element signature="n#!!block;n#createSpawnRecord#0" expanded="false" />
+            <element signature="n#!!block;n#removeControllerPaths#0" expanded="false" />
+            <element signature="n#!!block;n#drawLayouts#0" expanded="false" />
+            <element signature="n#!!block;n#drawLayoutIn#0" expanded="false" />
+            <element signature="n#!!block;n#drawBoundingCircle#0" expanded="false" />
+            <element signature="n#!!block;n#drawSourceToControllerPaths#0" expanded="false" />
+            <element signature="n#!!block;n#drawSourceToControllerPath#0" expanded="false" />
+            <element signature="n#!!block;n#drawSpawns#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source.harvesting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
