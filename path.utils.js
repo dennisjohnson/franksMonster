@@ -1,5 +1,6 @@
 module.exports = {
-    reversePath: reversePath
+    reversePath: reversePath,
+    moveToByPatfinderPath: moveToByPatfinderPath
 };
 
 function reversePath(path) {
@@ -21,14 +22,21 @@ function reversePathArray(path){
 function moveToByPatfinderPath(creep, path){
     if(path.path){path = path.path}
     let minRange, minRangeIndex;
-    let j = -1;
+    let stepsFromDestination = -1;
     for (let i = path.length; i >=0 ; i--){
-        j++;
+        stepsFromDestination++;
         let currentSpot = new RoomPosition(path[i].x, path[i].y, path[i].roomName);
         let deltas = getDeltas(creep.pos, currentSpot);
         let rangeToCurrentSpot = getRangeFromDeltas(deltas);
+        if (rangeToCurrentSpot === 0 ){return;}
         if (rangeToCurrentSpot === 1){
             moveOneStep(creep, deltas);
+            return;
+        }
+        let rangeFromDestination = rangeToCurrentSpot + stepsFromEndOfPath;
+        if (minRange === undefined || rangeFromDestination <= minRange){
+            minRange = rangeFromDestination;
+            minRangeIndex = i;
         }
     }
 }
@@ -46,11 +54,13 @@ function moveOneStep(creep, deltas){
 
 }
 function getDirectionFromDeltas(deltas){
-    let direction = 0; //TOP
-    if (deltas.y < 0){direction = direction + TOP;}
-    if (deltas.y === 0){}
-    if (deltas.y === 0){}
-    if (deltas.y === 0){}
-    if (deltas.y === 0){}
-    if (deltas.y === 0){}
+    if (deltas.x === 0 && deltas.y < 0){return TOP;}
+    if (deltas.x > 0 && deltas.y < 0){return TOP_RIGHT;}
+    if (deltas.x > 0 && deltas.y === 0){return RIGHT;}
+    if (deltas.x > 0 && deltas.y > 0){return BOTTOM_RIGHT;}
+    if (deltas.x === 0 && deltas.y > 0){return BOTTOM;}
+    if (deltas.x < 0 && deltas.y > 0){return BOTTOM_LEFT;}
+    if (deltas.x < 0 && deltas.y === 0){return LEFT;}
+    if (deltas.x < 0 && deltas.y < 0){return TOP_LEFT;}
+    return undefined;
 }
