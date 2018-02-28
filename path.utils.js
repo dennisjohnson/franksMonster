@@ -33,12 +33,20 @@ function moveToByPatfinderPath(creep, path){
             moveOneStep(creep, deltas);
             return;
         }
-        let rangeFromDestination = rangeToCurrentSpot + stepsFromEndOfPath;
-        if (minRange === undefined || rangeFromDestination <= minRange){
-            minRange = rangeFromDestination;
+        //let rangeFromDestination = rangeToCurrentSpot + stepsFromEndOfPath;
+        if (minRange === undefined || rangeToCurrentSpot < minRange){
+            minRange = rangeToCurrentSpot;
             minRangeIndex = i;
         }
     }
+    if (minRange === undefined || minRangeIndex === undefined){
+        console.log(creep, " can't follow path");
+        return;
+    }
+    if ( minRange > 4){
+        console.log(creep, " not close to path given: ", path)
+    }
+    creep.moveTo(path[minRangeIndex].x, path[iminRangeIndex].y, path[minRangeIndex].roomName)
 }
 
 function getDeltas(startPos, destPos){

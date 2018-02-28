@@ -5,13 +5,16 @@ let pathUtils = require('path.utils');
 module.exports = {
     "run": basicManager
 };
+function values(dict){
+    return Object.keys(dict).map((k) => dict[k]);
+}
 
 function basicManager(){
     takeVisibleInputs();
     removeStale();
+    acquireHarvesters();
     harvestSources();
     depositIncome();
-    requestHarvesters();
 }
 
 function removeStale(){
@@ -76,35 +79,59 @@ function depositIncome() {
         depositIncomeFrom(sourceRecord);
     }
 }
-function depositIncomeFrom(sourceRecord){
-    let spawnNames = Object.keys(Game.spawns);
-    if (spawnNames.length === 0) { return }
-    let firstSpawn = Game.spawns[spawnNames[0]];
-    let creep = Game.creeps[sourceRecord.primaryWorker];
-    if (!creep){return;}
-
-    if (creep.carry.energy > 44){
-        creep.transfer(firstSpawn, RESOURCE_ENERGY);
+function depositIncomeFrom(sourceRecord) {
+    function getStorage(sourceRecord) {
+        let spawnNames = Object.keys(Game.spawns);
+        if (spawnNames.length === 0) {
+            return
+        }
+        return Game.spawns[spawnNames[0]];
     }
+
+    let storage = getStorage(sourceRecord);
+    let creep = Game.creeps[sourceRecord.primaryWorker];
+    if (!creep || !storage) {
+        return;
+    }
+    creep.transfer(storage, RESOURCE_ENERGY);
 }
-function requestHarvesters() {
+function acquireHarvesters() {
     for (let sourceId in Memory["sources"]) {
         sourceRecord = Memory.sources[sourceId];
-        requestHarvestersFor(sourceRecord);
+        acquireHarvestersFor(sourceRecord);
     }
 }
-function requestHarvestersFor(sourceRecord){
-    console.log("Checking if Source ",sourceRecord.id," in ", sourceRecord.pos.roomName, " needs a new worker")
+function acquireHarvestersFor(sourceRecord){
+    console.log("Checking if Source ",sourceRecord.id," in ", sourceRecord.pos.roomName, " needs more workers")
 
+    // TODO better test that total work assgined meets supply, test for aging harvesters
+    if (Game.creeps[sourceRecord.primaryWorker] !== undefined){
+        return;
+    }
+    sourceRecord.primaryWorker = findAvailibleWorker(sourceRecord);
+    if (Game.creeps[sourceRecord.primaryWorker] !== undefined){
+        return;
+    }
+    spawnHarvester(sourceRecord);
+}
+function findAvailibleWorker(sourceRecord){
+    let creeps = values(Game.creeps);
+
+    console.log("finding worker:" ,JSON.stringify(creeps[0]))
+        //.find( c => c.Memory.hasOwnProperty("employer") &&  c.Memory.employer === sourceRecord.id);
+    //return creep.name;
+}
+function spawnHarvester(sourceRecord) {
     let spawnNames = Object.keys(Game.spawns);
-    if (spawnNames.length === 0) { return }
+    if (spawnNames.length === 0) {
+        return
+    }
     let firstSpawn = Game.spawns[spawnNames[0]];
-    if (Game.creeps[sourceRecord.primaryWorker] === undefined){
-        console.log("Source ",sourceRecord.id," in ", sourceRecord.pos.roomName, " is creating a new worker")
-        sourceRecord.primaryWorker = firstSpawn.createCreep([WORK,WORK,MOVE,CARRY]);
+    if (Game.creeps[sourceRecord.primaryWorker] === undefined || sourceRecord.primaryWorker < 0) {
+        console.log("Source ", sourceRecord.id, " in ", sourceRecord.pos.roomName, " is creating a new worker")
+        sourceRecord.primaryWorker = firstSpawn.createCreep([WORK, WORK, MOVE, CARRY], undefined, {"employer":sourceRecord.id});
     }
 }
-
 
 function sourceDetails(source, spawn){
 
@@ -136,3 +163,5 @@ function sourceDetails(source, spawn){
 
     return sourceDetail;
 }
+
+{"room":{"name":"W5N8","energyAvailable":97,"energyCapacityAvailable":300,"visual":{"roomName":"W5N8"}},"pos":{"x":16,"y":14,"roomName":"W5N8"},"id":"272fa17d3d824f8","name":"Hannah","body":[{"type":"work","hits":100},{"type":"work","hits":100},{"type":"move","hits":100},{"type":"carry","hits":100}],"my":true,"owner":{"username":"gorzakos"},"spawning":false,"ticksToLive":280,"carryCapacity":50,"carry":{"energy":0},"fatigue":0,"hits":400,"hitsMax":400}
