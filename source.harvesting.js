@@ -23,7 +23,7 @@ function removeStale(){
     if (spawnNames.length === 0) { return }
     let firstSpawn = Game.spawns[spawnNames[0]];
     for (let sourceId in Memory.sources) {
-        sourceMemory = Memory.sources[sourceId];
+        let sourceMemory = Memory.sources[sourceId];
         if (firstSpawn.pos.roomName !== sourceMemory.pos.roomName) {
             delete Memory.sources[sourceId];
         }
@@ -48,16 +48,13 @@ function takeVisibleInputs(){
 
     for (let source of firstSpawn.room.find(FIND_SOURCES)) {
         if (Memory.sources[source.id] === undefined || 1) {
-
-            let sourceDetail = sourceDetails(source, firstSpawn);
-            console.log("Before storage: ", JSON.stringify(sourceDetail));
-            Memory.sources[source.id] = sourceDetail;
+            Memory.sources[source.id] = getSourceDetails(source, firstSpawn);
         }
     }
 }
 function harvestSources(){
     for (let sourceId in Memory["sources"]){
-        sourceRecord = Memory.sources[sourceId];
+        let sourceRecord = Memory.sources[sourceId];
         harvestSource(sourceRecord);
     }
 }
@@ -75,7 +72,7 @@ function harvestSource(sourceRecord){
 }
 function depositIncome() {
     for (let sourceId in Memory["sources"]) {
-        sourceRecord = Memory.sources[sourceId];
+        let sourceRecord = Memory.sources[sourceId];
         depositIncomeFrom(sourceRecord);
     }
 }
@@ -97,29 +94,32 @@ function depositIncomeFrom(sourceRecord) {
 }
 function acquireHarvesters() {
     for (let sourceId in Memory["sources"]) {
-        sourceRecord = Memory.sources[sourceId];
+        let sourceRecord = Memory.sources[sourceId];
         acquireHarvestersFor(sourceRecord);
     }
 }
 function acquireHarvestersFor(sourceRecord){
-    console.log("Checking if Source ",sourceRecord.id," in ", sourceRecord.pos.roomName, " needs more workers")
 
     // TODO better test that total work assgined meets supply, test for aging harvesters
     if (Game.creeps[sourceRecord.primaryWorker] !== undefined){
         return;
     }
-    sourceRecord.primaryWorker = findAvailibleWorker(sourceRecord);
+    console.log("Source ",sourceRecord.id," in ", sourceRecord.pos.roomName, " needs more workers");
+    sourceRecord.primaryWorker = findAvailableWorker(sourceRecord);
     if (Game.creeps[sourceRecord.primaryWorker] !== undefined){
+        console.log("Source ",sourceRecord.id," in ", sourceRecord.pos.roomName, " found an availible worker: ", sourceRecord.primaryWorker);
         return;
     }
     spawnHarvester(sourceRecord);
 }
-function findAvailibleWorker(sourceRecord){
-    let creeps = values(Game.creeps);
-
-    console.log("finding worker:" ,JSON.stringify(creeps[0]))
-        //.find( c => c.Memory.hasOwnProperty("employer") &&  c.Memory.employer === sourceRecord.id);
-    //return creep.name;
+function findAvailableWorker(sourceRecord){
+    for (name in Game.creeps){
+        if (!Game.creeps[name].memory){console.log(name, " has no memory");continue;}
+        if (Game.creeps[name].memory.employer && Game.creeps[name].memory.employer === sourceRecord.id){
+            return name;
+        }
+    }
+    return undefined;
 }
 function spawnHarvester(sourceRecord) {
     let spawnNames = Object.keys(Game.spawns);
@@ -128,12 +128,12 @@ function spawnHarvester(sourceRecord) {
     }
     let firstSpawn = Game.spawns[spawnNames[0]];
     if (Game.creeps[sourceRecord.primaryWorker] === undefined || sourceRecord.primaryWorker < 0) {
-        console.log("Source ", sourceRecord.id, " in ", sourceRecord.pos.roomName, " is creating a new worker")
+        console.log("Source ", sourceRecord.id, " in ", sourceRecord.pos.roomName, " is creating a new worker");
         sourceRecord.primaryWorker = firstSpawn.createCreep([WORK, WORK, MOVE, CARRY], undefined, {"employer":sourceRecord.id});
     }
 }
 
-function sourceDetails(source, spawn){
+function getSourceDetails(source, spawn){
 
     let layoutSource = roomLayout.getSourceRecord(source.pos);
     let closestSpawn = spawn;
@@ -141,7 +141,6 @@ function sourceDetails(source, spawn){
     let pathFromSpawn = closestSpawn.pos.findPathTo(source);
 
     let reversePath = pathUtils.reversePath(layoutSource.pathToController);
-    console.log("Path after reversal: ", JSON.stringify(reversePath));
 
     let sourceDetail =  {
         'pos': source.pos,
@@ -159,9 +158,7 @@ function sourceDetails(source, spawn){
         'primaryWorker': '',
         'workers': []
     };
-    console.log("sourceDetail: ", JSON.stringify(sourceDetail));
-
     return sourceDetail;
 }
 
-{"room":{"name":"W5N8","energyAvailable":97,"energyCapacityAvailable":300,"visual":{"roomName":"W5N8"}},"pos":{"x":16,"y":14,"roomName":"W5N8"},"id":"272fa17d3d824f8","name":"Hannah","body":[{"type":"work","hits":100},{"type":"work","hits":100},{"type":"move","hits":100},{"type":"carry","hits":100}],"my":true,"owner":{"username":"gorzakos"},"spawning":false,"ticksToLive":280,"carryCapacity":50,"carry":{"energy":0},"fatigue":0,"hits":400,"hitsMax":400}
+//{"room":{"name":"W5N8","energyAvailable":97,"energyCapacityAvailable":300,"visual":{"roomName":"W5N8"}},"pos":{"x":16,"y":14,"roomName":"W5N8"},"id":"272fa17d3d824f8","name":"Hannah","body":[{"type":"work","hits":100},{"type":"work","hits":100},{"type":"move","hits":100},{"type":"carry","hits":100}],"my":true,"owner":{"username":"gorzakos"},"spawning":false,"ticksToLive":280,"carryCapacity":50,"carry":{"energy":0},"fatigue":0,"hits":400,"hitsMax":400}

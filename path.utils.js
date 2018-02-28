@@ -14,7 +14,6 @@ function reversePath(path) {
 }
 
 function reversePathArray(path){
-    console.log("Path before reversal: ", JSON.stringify(path));
     return [...path].reverse()
 }
 
@@ -30,8 +29,7 @@ function moveToByPatfinderPath(creep, path){
         let rangeToCurrentSpot = getRangeFromDeltas(deltas);
         if (rangeToCurrentSpot === 0 ){return;}
         if (rangeToCurrentSpot === 1){
-            moveOneStep(creep, deltas);
-            return;
+            return moveOneStep(creep, deltas);
         }
         //let rangeFromDestination = rangeToCurrentSpot + stepsFromEndOfPath;
         if (minRange === undefined || rangeToCurrentSpot < minRange){
@@ -46,7 +44,7 @@ function moveToByPatfinderPath(creep, path){
     if ( minRange > 4){
         console.log(creep, " not close to path given: ", path)
     }
-    creep.moveTo(path[minRangeIndex].x, path[iminRangeIndex].y, path[minRangeIndex].roomName)
+    return creep.moveTo(path[minRangeIndex].x, path[iminRangeIndex].y, path[minRangeIndex].roomName)
 }
 
 function getDeltas(startPos, destPos){
