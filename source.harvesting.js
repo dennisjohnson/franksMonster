@@ -60,11 +60,14 @@ function harvestSources(){
 }
 function harvestSource(sourceRecord){
     let creep = Game.creeps[sourceRecord.primaryWorker];
-    if (!creep){return;}
+    if (!creep){
+        console.log("couldn't acquire creep to harvest ", sourceRecord.id);
+        return;}
 
     let source = Game.getObjectById(sourceRecord.id);
     if (creep.harvest(source) === ERR_NOT_IN_RANGE){
-        if(creep.moveByPath(sourceRecord.pathFromSpawn) === ERR_NOT_FOUND){
+        if(pathUtils.moveToByPatfinderPath(creep, sourceRecord.pathFromSpawn)){
+        //if(creep.moveByPath(sourceRecord.pathFromSpawn) === ERR_NOT_FOUND){
             console.log(creep.name + " moving to beginning of source path");
             creep.moveTo(sourceRecord.pathFromSpawn[0].x, sourceRecord.pathFromSpawn[0].y);
         }
@@ -151,7 +154,7 @@ function getSourceDetails(source, spawn){
         'energyDropoffSpot': layoutSource.energyDropoffSpot,
         'controllerWorkSpot': layoutSource.upgradeSpot,
         'closestSpawn': closestSpawn.name,
-        'pathFromSpawn': pathFromSpawn,
+        'pathFromSpawn': layoutSource.pathFromSpawn,
         'pathFromController': reversePath,
         'pathToController': layoutSource.pathToController,
         'distToSpawn': pathFromSpawn.length,
@@ -161,4 +164,3 @@ function getSourceDetails(source, spawn){
     return sourceDetail;
 }
 
-//{"room":{"name":"W5N8","energyAvailable":97,"energyCapacityAvailable":300,"visual":{"roomName":"W5N8"}},"pos":{"x":16,"y":14,"roomName":"W5N8"},"id":"272fa17d3d824f8","name":"Hannah","body":[{"type":"work","hits":100},{"type":"work","hits":100},{"type":"move","hits":100},{"type":"carry","hits":100}],"my":true,"owner":{"username":"gorzakos"},"spawning":false,"ticksToLive":280,"carryCapacity":50,"carry":{"energy":0},"fatigue":0,"hits":400,"hitsMax":400}

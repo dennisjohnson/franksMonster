@@ -204,7 +204,7 @@ function createSourceToControllerPath(sourceRecord, controllerRecord, discardExi
     if(sourceRecord["pathToController"] && !discardExisting){return;}
     let sourcePos = new RoomPosition(sourceRecord.pos.x, sourceRecord.pos.y, sourceRecord.pos.roomName);
     let controllerPos = new RoomPosition(controllerRecord.pos.x, controllerRecord.pos.y, controllerRecord.pos.roomName);
-    console.log("getting path for " + sourceRecord.pos.roomName);
+    console.log("getting path for ", sourceRecord.id, " in ", sourceRecord.pos.roomName);
     sourceRecord["pathToController"] = PathFinder.search(
         sourcePos,
         {"pos": controllerPos, "range": 3},
@@ -358,6 +358,7 @@ function cacheCostMatrix(costs, roomLayout){
 function createRCL1Structures(roomLayout, discardExisting){
     if (!isExpansionCandidate(roomLayout)){return;}
     createSpawn(roomLayout, discardExisting);
+    createSpawnToSourcePaths(roomLayout);
 }
 function isExpansionCandidate(roomLayout){
     return roomLayout["expansionRoom"]
@@ -445,6 +446,20 @@ function removeControllerPaths(candidatePos, roomLayout){
         candidatePos = minusPositionList(candidatePos,source.pathToController.path);
     }
     return candidatePos;
+}
+function createSpawnToSourcePaths(roomLayout){
+    let spawnRecords = values(roomLayout.spawns);
+    let spawnPos = spawnRecords[0].pos;
+    for (let sourcePosName in roomLayout.sources){
+        let goalPos = roomLayout.sources[sourcePosName].harvestSpot;
+        roomLayout.sources[sourcePosName]["pathFromSpawn"] = createSpawnToSourcePath(roomLayout, spawnPos, goalPos);
+    }
+}
+function createSpawnToSourcePath(roomLayout, spawnPos, goalPos){
+    return PathFinder.search(
+        spawnPos,
+        {"pos": goalPos, "range": 0},
+        {"roomCallback": getLayoutCostMatrix, "plainCost": 20, "swampCost": 21, "maxRooms": 1});
 }
 
 function drawLayouts(){

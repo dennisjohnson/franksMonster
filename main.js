@@ -18,21 +18,26 @@ module.exports.loop = function() {
 function loop(){
     roomLayout.run();
 
+    harvesterIncome.run();
+
+
     let spawnNames = Object.keys(Game.spawns);
     if (spawnNames.length === 0) { return }
     let firstSpawn = Game.spawns[spawnNames[0]];
     let name;
 
-    let controllerWorkSpot = new RoomPosition(9,31, firstSpawn.room.name);
-    let energyPickupSpot = new RoomPosition(44,5, firstSpawn.room.name);
-    let energyDropoffSpot = new RoomPosition(10,30, firstSpawn.room.name);
-
-    if (Memory["sources"] === undefined){
-        Memory["sources"] = {};
+    let closerSource;
+    for (sourceId in Memory.sources){
+        let pathLength = Memory.sources[sourceId].pathToController.path.length;
+        if (!closerSource || pathLength < Memory.sources[closerSource].pathToController.path.length){
+            closerSource = sourceId;
+        }
     }
 
+    let controllerWorkSpot = Memory.sources[closerSource].upgradeSpot;
+    let energyPickupSpot = Memory.sources[closerSource].energyPickupSpot;
+    let energyDropoffSpot = Memory.sources[closerSource].energyDropoffSpot;
 
-    harvesterIncome.run();
 
     name = "Rascal";
     if (Game.creeps[name] === undefined){

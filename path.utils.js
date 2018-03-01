@@ -22,12 +22,14 @@ function moveToByPatfinderPath(creep, path){
     if(path.path){path = path.path}
     let minRange, minRangeIndex;
     let stepsFromDestination = -1;
-    for (let i = path.length; i >=0 ; i--){
+    console.log(creep, " using Pathfinder path to move");
+    for (let i = path.length - 1; i >=0 ; i--){
         stepsFromDestination++;
+        console.log("path: ", JSON.stringify(path))
         let currentSpot = new RoomPosition(path[i].x, path[i].y, path[i].roomName);
         let deltas = getDeltas(creep.pos, currentSpot);
         let rangeToCurrentSpot = getRangeFromDeltas(deltas);
-        if (rangeToCurrentSpot === 0 ){return;}
+        if (rangeToCurrentSpot === 0 ){return ERR_NOT_FOUND;}
         if (rangeToCurrentSpot === 1){
             return moveOneStep(creep, deltas);
         }
@@ -39,12 +41,12 @@ function moveToByPatfinderPath(creep, path){
     }
     if (minRange === undefined || minRangeIndex === undefined){
         console.log(creep, " can't follow path");
-        return;
+        return ERR_NOT_FOUND;
     }
     if ( minRange > 4){
         console.log(creep, " not close to path given: ", path)
     }
-    return creep.moveTo(path[minRangeIndex].x, path[iminRangeIndex].y, path[minRangeIndex].roomName)
+    return creep.moveTo(new RoomPosition(path[minRangeIndex].x, path[minRangeIndex].y, path[minRangeIndex].roomName));
 }
 
 function getDeltas(startPos, destPos){
@@ -52,7 +54,7 @@ function getDeltas(startPos, destPos){
     return {"x": destPos.x - startPos.x, "y": destPos.y - startPos.y}
 }
 function getRangeFromDeltas(deltas){
-    return max(Math.abs(deltas.x), Math.abs(deltas.y));
+    return _.max(Math.abs(deltas.x), Math.abs(deltas.y));
 }
 
 function moveOneStep(creep, deltas){
